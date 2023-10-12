@@ -1,0 +1,71 @@
+@function multiple-box-shadow ($n) {
+  $value: '#{random(2000)}px #{random(2000)}px #FFFFFF80';
+  @for $i from 2 through $n {
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFFFFF80';
+  }
+
+  @return unquote($value);
+}
+$shadows-small: multiple-box-shadow(150);
+$shadows-medium: multiple-box-shadow(80);
+
+#stars {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  transform-origin:center;
+  background: transparent;
+  box-shadow: $shadows-small;
+  opacity: .8;
+  transform: rotateZ(340deg);
+
+  animation:  animStar 8s ease-out ;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
+  }
+}
+#stars2 {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  background: transparent;
+  box-shadow: $shadows-medium;
+  transform: rotateZ(340deg);
+  transform-origin:center;
+  opacity: .8;
+
+  animation: animStar 8s ease-in-out ;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+  }
+}
+
+@keyframes animStar {
+0% {
+    transform: rotateZ(270deg);
+    opacity: 0;
+    padding-right: 2px;
+  }
+  30%{
+    opacity: 1;
+  }
+  100% {
+    transform: rotateZ(340deg);
+    opacity: .8;
+    padding-right: 0px;
+  }
+};
+

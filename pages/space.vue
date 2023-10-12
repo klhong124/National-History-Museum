@@ -1,13 +1,19 @@
 <template>
   <div class="space-page container">
-    <h1 class="space-page__title">Space</h1>
+    <h1 class="space-page__title" data-aos="fade-right">Space</h1>
 
     <div class="card-list">
-      <MuseumHighlight v-for="n in combinedData" :key="n.id" :data="n">
+      <MuseumHighlight
+        v-for="(n, i) in combinedData"
+        :key="n.id"
+        :data="n"
+        data-aos="fade-up"
+        :data-aos-delay="i < 4 ? 100 * i : 0"
+      >
         <template v-slot:actions>
-          <a v-if="n.quiz" :href="n.quiz" target="_blank">
+          <NuxtLink v-if="n.quiz" :href="n.quiz" target="_blank">
             <button class="quiz-button">Quiz</button>
-          </a>
+          </NuxtLink>
         </template>
 
         <template v-slot:badge>

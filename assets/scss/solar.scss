@@ -1,0 +1,81 @@
+#solar{
+    color: #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 2em;
+    position: absolute;
+    top: 10%;
+    right: 30%;
+    margin: -50px 0 0 -50px;
+    animation: rotate 10s linear infinite;
+    box-shadow: 0 0 0 10px rgba(0,0,0,0.2);
+
+    #sun{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+        top: 50%;
+        left: 50%;
+        margin-left: -10px;
+        margin-top: -10px;
+        animation: rotate 5s linear infinite;
+    }
+.planet{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+    &:nth-child(1){
+        top: 0;
+        left: 50%;
+        margin-left: -10px;
+        animation: orbit 5s linear infinite;
+    }
+    &:nth-child(2){
+        top: 50%;
+        left: 100%;
+        margin-left: -10px;
+        margin-top: -10px;
+        animation: orbit 10s linear infinite;
+    }
+    &:nth-child(3){
+        top: 100%;
+        left: 50%;
+        margin-left: -10px;
+        margin-top: -10px;
+        animation: orbit 15s linear infinite;
+    }
+    &:nth-child(4){
+        top: 50%;
+        left: 0;
+        margin-left: -10px;
+        margin-top: -10px;
+        animation: orbit 20s linear infinite;
+    }
+}
+
+
+    @for $i from 1 through 12{
+        &:nth-child(#{$i}){
+            animation-delay: $i * 0.83s;
+        }
+    }
+
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

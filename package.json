@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@fortawesome/vue-fontawesome": "^3.0.3",
+    "aos": "^2.3.4",
     "lodash": "^4.17.21"
   }
 }

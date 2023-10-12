@@ -65,7 +65,7 @@ export default {
       // Fetch a new image for the highlight
       this.loading = true;
       await fetch(
-        `https://source.unsplash.com/featured/?${this.data.name}`
+        `https://source.unsplash.com/featured/500x500?${this.data.name}`
       ).then((response) => {
         this.data.image = response.url;
       });
@@ -81,8 +81,8 @@ export default {
   position: relative;
   .card {
     height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(4px);
     border-radius: 12px;
     color: #f2f2f3;
     font-weight: 600;
@@ -91,6 +91,10 @@ export default {
     overflow: hidden;
     border-bottom: rgba(255, 255, 255, 0.1) 2px solid;
     border-left: rgba(0, 0, 0, 0.5) 1px solid;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: translateY(-6px);
+    }
 
     &__image {
       position: relative;
@@ -132,6 +136,7 @@ export default {
     &__content {
       padding: 8px 12px;
       line-height: 32px;
+      color: rgb(194, 200, 217);
     }
 
     &__news {

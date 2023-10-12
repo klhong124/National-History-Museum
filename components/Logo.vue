@@ -12,7 +12,7 @@
   display: grid;
   place-items: center;
   font-weight: bold;
-  font-family: 'times new roman', sans-serif;
+  font-family: "times new roman", sans-serif;
   line-height: 0%;
   border-radius: 4px;
 }
