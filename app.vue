@@ -7,7 +7,6 @@
 </template>
 
 <style>
-body{
-  margin:0;
-}
+@import "@/assets/scss/global.scss";
+
 </style>

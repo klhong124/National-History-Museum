@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: "roboto";
+}
+
+.container{
+    width: calc(100% - 24px);
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
