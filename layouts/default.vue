@@ -2,17 +2,20 @@
   <main class="background" :class="[$route.name]">
     <div id="stars"></div>
     <div id="stars2"></div>
-    <div id="solar">
-      <div class="planet" id="sun"></div>
-      <div class="planet" id="mercury"></div>
-      <div class="planet" id="venus"></div>
-      <div class="planet" id="earth"></div>
-      <div class="planet" id="mars"></div>
-      <div class="planet" id="jupiter"></div>
-      <div class="planet" id="saturn"></div>
-      <div class="planet" id="uranus"></div>
-      <div class="planet" id="neptune"></div>
-      <div class="planet" id="pluto"></div>
+
+    <div id="solar-canvas" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="500">
+      <div id="solar">
+        <div id="sun"></div>
+        <div class="planet" id="mercury" ></div>
+        <div class="planet" id="venus" ></div>
+        <div class="planet" id="earth" ></div>
+        <div class="planet" id="mars" ></div>
+        <div class="planet" id="jupiter" ></div>
+        <div class="planet" id="saturn" ></div>
+        <div class="planet" id="uranus" ></div>
+        <div class="planet" id="neptune" ></div>
+        <div class="planet" id="pluto" ></div>
+      </div>
     </div>
 
     <nav class="nav container">
