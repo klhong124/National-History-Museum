@@ -10,6 +10,9 @@
         data-aos="fade-up"
         :data-aos-delay="i < 4 ? 100 * i : 0"
       >
+        <!-- demo for dinosaur card -->
+        <!-- <div v-if="n.Period">{{n.Period}}</div> -->
+
         <template v-slot:actions>
           <NuxtLink v-if="n.quiz" :href="n.quiz" target="_blank">
             <button class="quiz-button">Quiz</button>
